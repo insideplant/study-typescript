@@ -29,7 +29,16 @@ const coffee = {
     size: CoffeeSize.TALL
 };
 coffee.size = CoffeeSize.SHORT;
-console.log(coffee);
+console.log(CoffeeSize.SHORT);
+let anything = true;
+anything = 'hello';
+anything = ['hello', 33, true];
+anything = {};
+anything.fhdfjdf = 'hhdfkdf';
+console.log(anything);
+let banana = 'banana';
+banana = anything;
+console.log(banana);
 let unionType = [10, 'hello'];
 const apple = 'hello';
 let clothSize = 'large';

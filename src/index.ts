@@ -33,14 +33,34 @@ const coffee = {
 }
 
 coffee.size = CoffeeSize.SHORT;
-console.log(coffee);
+console.log(CoffeeSize.SHORT);
+
+let anything: any = true;
+anything = 'hello';
+anything = ['hello', 33, true];
+anything = {};
+anything.fhdfjdf = 'hhdfkdf';
+console.log(anything);
+let banana = 'banana';
+banana = anything;
+console.log(banana);
+
 
 let unionType: (number | string)[] = [10, 'hello'];
-const apple = 'hello'
 
 type ClothSize = 'small' | 'medium' | 'large'
 
-let clothSize:ClothSize  ='large'
+const apple = 'hello'
+let clothSize: ClothSize = 'large';
+
+const cloth: {
+  color: string;
+  size: 'small' | 'medium' | 'large'
+} = {
+  color: 'white',
+  size: clothSize
+}
+
 
 function add (num1:number, num2:number):number {
   return num1 + num2
@@ -50,19 +70,24 @@ function sayHello():void {
   console.log('Hello');
 }
 
+console.log(sayHello());
+let tmp2: undefined;
+
 const anotherAdd: (n1: number, n2: number) => number = function (num1:number, num2:number):number {
   return num1 + num2
-}
+};
+
+const doubleNumber: (num: number) => number = number =>  number*2;
 
 function doubleAndHandle(num: number, cb: (num: number) => void): void {
   const doubleNum = cb(num *2);
   console.log(doubleNum);
   console.log(num * 2);
-}
+};
 
 doubleAndHandle(21, doubleNum => {
   return doubleNum
-})
+});
 
 let unknownInput: unknown;
 let anyInput: any;

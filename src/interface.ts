@@ -1,4 +1,4 @@
-// type addFunc = (num1: number, num2: number) => number;
+// type addFunc = (num1: number, num2: number) => ;
 interface addFunc {
   (num1: number, num2: number): number;
 }
