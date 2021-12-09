@@ -42,20 +42,28 @@ console.log(banana);
 let unionType = [10, 'hello'];
 const apple = 'hello';
 let clothSize = 'large';
+const cloth = {
+    color: 'white',
+    size: clothSize
+};
 function add(num1, num2) {
     return num1 + num2;
 }
 function sayHello() {
     console.log('Hello');
 }
+console.log(sayHello());
+let tmp2;
 const anotherAdd = function (num1, num2) {
     return num1 + num2;
 };
+const doubleNumber = number => number * 2;
 function doubleAndHandle(num, cb) {
     const doubleNum = cb(num * 2);
     console.log(doubleNum);
     console.log(num * 2);
 }
+;
 doubleAndHandle(21, doubleNum => {
     return doubleNum;
 });
@@ -69,3 +77,7 @@ text = anyInput;
 if (typeof unknownInput === 'string') {
     text = unknownInput;
 }
+function error(message) {
+    throw new Error(message);
+}
+console.log(error('This is an error'));
